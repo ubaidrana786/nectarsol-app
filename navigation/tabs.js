@@ -131,7 +131,7 @@ const Tabs = () => {
               style={{
                 width: 25,
                 height: 25,
-                tintColor: focused ? COLORS.lime : COLORS.secondary,
+                tintColor: focused ? COLORS.lime : COLORS.black,
               }}
             />
           ),
