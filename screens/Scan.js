@@ -205,7 +205,7 @@ const Settings = ({ navigation }) => {
           <Text
             style={{
               color: COLORS.white,
-              ...FONTS.body4,
+              ...FONTS.h3,
             }}
           >
             Log Out
