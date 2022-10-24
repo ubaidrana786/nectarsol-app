@@ -8,12 +8,12 @@ const eye = require("../assets/icons/eye.png");
 const games = require("../assets/icons/games.png");
 const barcode = require("../assets/icons/barcode.png");
 const info = require("../assets/icons/info.png");
-const internet = require("../assets/icons/internet.png");
-const more = require("../assets/icons/more.png");
+const coperate = require("../assets/icons/coperate.png");
+const family = require("../assets/icons/family.png");
 const phone = require("../assets/icons/phone.png");
-const reload = require("../assets/icons/reload.png");
+const criminal = require("../assets/icons/criminal.png");
 const scan = require("../assets/icons/scan.png");
-const send = require("../assets/icons/send.png");
+const property = require("../assets/icons/property.png");
 const user = require("../assets/icons/user.png");
 const wallet = require("../assets/icons/wallet.png");
 const pencil = require("../assets/icons/pencil.png");
@@ -21,8 +21,33 @@ const ratingstar = require("../assets/icons/ratingstar.png");
 const logouticon = require("../assets/icons/logouticon.png");
 const home = require("../assets/icons/home.png");
 const list = require("../assets/icons/group.png");
+const civil = require("../assets/icons/civil.png");
+const commercial = require("../assets/icons/commercial.png");
+const construction = require("../assets/icons/construction.png");
+const consumer = require("../assets/icons/consumer.png");
+const dispute = require("../assets/icons/dispute.png");
+const environmental = require("../assets/icons/environmental.png");
+const humanrights = require("../assets/icons/humanrights.png");
+const injury = require("../assets/icons/injury.png");
+const insurance = require("../assets/icons/insurance.png");
+const litigation = require("../assets/icons/litigation.png");
+const privateclient = require("../assets/icons/privateclient.png");
+const migration = require("../assets/icons/migration.png");
+const friends = require("../assets/icons/friends.png");
 
 export default {
+  migration,
+  privateclient,
+  litigation,
+  insurance,
+  injury,
+  humanrights,
+  environmental,
+  dispute,
+  consumer,
+  construction,
+  commercial,
+  civil,
   back,
   bill,
   bell,
@@ -33,17 +58,18 @@ export default {
   games,
   barcode,
   info,
-  internet,
+  coperate,
   phone,
-  more,
-  reload,
+  criminal,
+  family,
   scan,
-  send,
+  property,
   user,
   wallet,
   pencil,
   ratingstar,
   logouticon,
   home,
-  list
+  list,
+  friends
 };

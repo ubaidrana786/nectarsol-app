@@ -4,7 +4,7 @@ import {
   createBottomTabNavigator,
   BottomTabBar,
 } from "@react-navigation/bottom-tabs";
-import { Home, Scan, User, User2 } from "../screens";
+import { Home, Scan, User, AllServices } from "../screens";
 import { COLORS, icons } from "../constants";
 import Svg, { Path } from "react-native-svg";
 import LawyersList from "../screens/LawyersList";
@@ -138,7 +138,7 @@ const Tabs = () => {
           tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Scan"
         component={Scan}
         options={{
@@ -156,7 +156,7 @@ const Tabs = () => {
           ),
           tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
-      />
+      /> */}
       <Tab.Screen
         name="User"
         component={User}

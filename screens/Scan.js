@@ -14,6 +14,12 @@ const Settings = ({ navigation }) => {
   const goToSignUp = () => {
     navigation.navigate("SignUp");
   };
+  const goToUser = () => {
+    navigation.navigate("User");
+  };
+  const goToReffer = () => {
+    navigation.navigate("Reffer");
+  };
 
   function renderHeader() {
     return (
@@ -50,9 +56,10 @@ const Settings = ({ navigation }) => {
               alignItems: "center",
               backgroundColor: COLORS.lightGray,
             }}
+            onPress={goToUser}
           >
             <Image
-              source={icons.scan}
+              source={icons.user}
               style={{
                 width: 20,
                 height: 20,
@@ -85,7 +92,7 @@ const Settings = ({ navigation }) => {
             paddingLeft: 20,
             paddingRight: 20,
           }}
-          onPress={() => console.log("General")}
+          onPress={goToReffer}
         >
           <Text
             style={{
@@ -205,7 +212,7 @@ const Settings = ({ navigation }) => {
           <Text
             style={{
               color: COLORS.white,
-              ...FONTS.body4,
+              ...FONTS.h3,
             }}
           >
             Log Out
