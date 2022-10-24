@@ -7,6 +7,8 @@ import { LogIn } from "./screens";
 import { Home } from "./screens";
 import { ForgotPassword } from "./screens";
 import Tabs from "./navigation/tabs";
+
+
 const theme = {
   ...DefaultTheme,
   colors: {
@@ -16,6 +18,8 @@ const theme = {
 };
 const Stack = createStackNavigator();
 const App = () => {
+
+
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator
