@@ -4,4 +4,7 @@ import SignUp from "./SignUp";
 import LogIn from "./LogIn";
 import ForgotPassword from "./ForgotPassword";
 import User from "./User";
-export { Home, Scan, SignUp, LogIn, ForgotPassword, User };
+import Search from "./Search";
+import AllServices from "./AllServices";
+import Reffer from "./Reffer";
+export { Home, Scan, SignUp, LogIn, ForgotPassword, User, Search, AllServices, Reffer };

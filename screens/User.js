@@ -10,53 +10,16 @@ import {
 } from "react-native";
 import { COLORS, FONTS, SIZES, icons, images } from "../constants";
 
-const User = () => {
-  const specialPromoData = [
-    {
-      id: 1,
-      title: "Name",
-      image: images.avatar,
-      description: "John Doe",
-    },
-    {
-      id: 2,
-      title: "Email",
-      image: images.yawar,
-      description: "johndoe@gmail.com",
-    },
-    {
-      id: 3,
-      title: "Contact #",
-      image: images.aleem,
-      description: "+92 340 123 4344",
-    },
-    {
-      id: 4,
-      title: "Address",
-      image: images.waqas,
-      description: "100 South Whales Street 48 Sydney, Australia",
-    },
-    {
-      id: 5,
-      title: "Age",
-      image: images.waqas,
-      description: "29",
-    },
-    {
-      id: 6,
-      title: "Age",
-      image: images.waqas,
-      description: "29",
-    },
-    {
-      id: 7,
-      title: "Age",
-      image: images.waqas,
-      description: "29",
-    },
-  ];
-
-  const [specialPromos, setSpecialPromos] = React.useState(specialPromoData);
+const Settings = ({ navigation }) => {
+  const goToSignUp = () => {
+    navigation.navigate("SignUp");
+  };
+  const goToScan = () => {
+    navigation.navigate("Scan");
+  };
+  const goToReffer = () => {
+    navigation.navigate("Reffer");
+  };
 
   function renderHeader() {
     return (
@@ -71,34 +34,13 @@ const User = () => {
             flex: 1,
           }}
         >
-          <View
+          <Text
             style={{
-              flex: 1,
+              ...FONTS.h1,
             }}
           >
-            <Text
-              style={{
-                ...FONTS.h1,
-              }}
-            >
-              Profile
-            </Text>
-            <Text
-              style={{
-                ...FONTS.h4,
-              }}
-            >
-              4.7{" "}
-              <Image
-                source={icons.ratingstar}
-                style={{
-                  width: 30,
-                  height: 30,
-                  tintColor: COLORS.yellow,
-                }}
-              />
-            </Text>
-          </View>
+            Settings
+          </Text>
         </View>
         <View
           style={{
@@ -112,38 +54,178 @@ const User = () => {
               width: 40,
               justifyContent: "center",
               alignItems: "center",
+              backgroundColor: COLORS.lightGray,
             }}
-            onPress={() => console.log("Avatar Image")}
+            onPress={goToScan}
           >
             <Image
-              source={images.avatar}
+              source={icons.scan}
               style={{
-                width: 40,
-                height: 40,
-                borderRadius: 8,
+                width: 20,
+                height: 20,
+                tintColor: COLORS.secondary,
               }}
             />
-            <View
-              style={{
-                position: "absolute",
-                top: -5,
-                right: -5,
-                height: 10,
-                width: 10,
-                backgroundColor: COLORS.lightGreen,
-                borderRadius: 5,
-              }}
-            >
-              <Image
-                source={icons.pencil}
-                style={{
-                  width: 10,
-                  height: 10,
-                }}
-              />
-            </View>
           </TouchableOpacity>
         </View>
+      </View>
+    );
+  }
+
+  function renderButton() {
+    return (
+      <View
+        style={{
+          margin: SIZES.padding * 3,
+          marginTop: 0,
+        }}
+      >
+        <TouchableOpacity
+          style={{
+            height: 60,
+            backgroundColor: COLORS.lightGray,
+            borderRadius: SIZES.radius / 5,
+            justifyContent: "space-between",
+            marginTop: SIZES.padding * 2,
+            alignItems: "center",
+            flexDirection: "row",
+            paddingLeft: 20,
+            paddingRight: 20,
+          }}
+          onPress={goToReffer}
+        >
+          <Text
+            style={{
+              color: COLORS.black,
+              ...FONTS.h3,
+            }}
+          >
+            General/Reffer Form
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            height: 60,
+            backgroundColor: COLORS.lightGray,
+            borderRadius: SIZES.radius / 5,
+            justifyContent: "space-between",
+            marginTop: SIZES.padding * 2,
+            alignItems: "center",
+            flexDirection: "row",
+            paddingLeft: 20,
+            paddingRight: 20,
+          }}
+          onPress={() => console.log("Security")}
+        >
+          <Text
+            style={{
+              color: COLORS.black,
+              ...FONTS.h3,
+            }}
+          >
+            Security
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            height: 60,
+            backgroundColor: COLORS.lightGray,
+            borderRadius: SIZES.radius / 5,
+            justifyContent: "space-between",
+            marginTop: SIZES.padding * 2,
+            alignItems: "center",
+            flexDirection: "row",
+            paddingLeft: 20,
+            paddingRight: 20,
+          }}
+          onPress={() => console.log("Advance")}
+        >
+          <Text
+            style={{
+              color: COLORS.black,
+              ...FONTS.h3,
+            }}
+          >
+            Advance
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            height: 60,
+            backgroundColor: COLORS.lightGray,
+            borderRadius: SIZES.radius / 5,
+            justifyContent: "space-between",
+            marginTop: SIZES.padding * 2,
+            alignItems: "center",
+            flexDirection: "row",
+            paddingLeft: 20,
+            paddingRight: 20,
+          }}
+          onPress={() => console.log("Privacy Policy")}
+        >
+          <Text
+            style={{
+              color: COLORS.black,
+              ...FONTS.h3,
+            }}
+          >
+            Privacy Policy
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            height: 60,
+            backgroundColor: COLORS.lightGray,
+            borderRadius: SIZES.radius / 5,
+            justifyContent: "space-between",
+            marginTop: SIZES.padding * 2,
+            alignItems: "center",
+            flexDirection: "row",
+            paddingLeft: 20,
+            paddingRight: 20,
+          }}
+          onPress={() => console.log("Terms & Conditions")}
+        >
+          <Text
+            style={{
+              color: COLORS.black,
+              ...FONTS.h3,
+            }}
+          >
+            Terms & Conditions
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            height: 60,
+            backgroundColor: COLORS.red,
+            borderRadius: SIZES.radius / 5,
+            justifyContent: "space-between",
+            marginTop: SIZES.padding * 2,
+            alignItems: "center",
+            flexDirection: "row",
+            paddingLeft: 20,
+            paddingRight: 20,
+          }}
+          onPress={goToSignUp}
+        >
+          <Text
+            style={{
+              color: COLORS.white,
+              ...FONTS.h3,
+            }}
+          >
+            Log Out
+          </Text>
+          <Image
+            source={icons.logouticon}
+            style={{
+              width: 20,
+              height: 20,
+              tintColor: COLORS.white,
+            }}
+          />
+        </TouchableOpacity>
       </View>
     );
   }
@@ -151,67 +233,10 @@ const User = () => {
   function renderPromos() {
     const HeaderComponent = () => <View>{renderHeader()}</View>;
 
-    const renderItem = ({ item }) => (
-      <TouchableOpacity
-        style={{
-          marginVertical: SIZES.base,
-          width: "100%",
-        }}
-        onPress={() => console.log("Show Modal")}
-      >
-        <View
-          style={{
-            padding: SIZES.padding * 0.5,
-            backgroundColor: COLORS.white,
-            borderBottomLeftRadius: 0,
-            borderTopLeftRadius: 0,
-            borderBottomRightRadius: 0,
-            borderTopRightRadius: 0,
-            borderWidth: 1,
-            borderColor: COLORS.transparent,
-            borderBottomColor: COLORS.black,
-          }}
-        >
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <Text
-              style={{
-                ...FONTS.h4,
-                paddingBottom: SIZES.padding,
-              }}
-            >
-              {item.title}
-            </Text>
-            <Image
-              source={icons.pencil}
-              style={{
-                width: 20,
-                height: 20,
-                tintColor: COLORS.secondary,
-              }}
-            />
-          </View>
-          <Text
-            style={{
-              ...FONTS.body5,
-            }}
-          >
-            {item.description}
-          </Text>
-        </View>
-      </TouchableOpacity>
-    );
-
     return (
       <FlatList
         ListHeaderComponent={HeaderComponent}
         contentContainerStyle={{ paddingHorizontal: SIZES.padding * 3 }}
-        data={specialPromos}
-        renderItem={renderItem}
         showsVerticalScrollIndicator={false}
       />
     );
@@ -225,9 +250,12 @@ const User = () => {
       }}
     >
       <StatusBar style="auto" />
-      {renderPromos()}
+      <View>
+        {renderPromos()}
+        {renderButton()}
+      </View>
     </SafeAreaView>
   );
 };
 
-export default User;
+export default Settings;

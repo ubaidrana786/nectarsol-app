@@ -9,12 +9,9 @@ import {
   StatusBar,
 } from "react-native";
 import { COLORS, FONTS, SIZES, icons, images } from "../constants";
-const Home = ({ navigation }) => {
+const AllServices = ({ navigation }) => {
   const goToSignUp = () => {
     navigation.navigate("SignUp");
-  };
-  const goToReffer = () => {
-    navigation.navigate("Reffer");
   };
   const goToSearch = () => {
     navigation.navigate("Search");
@@ -22,38 +19,120 @@ const Home = ({ navigation }) => {
   const goToHome = () => {
     navigation.navigate("Home");
   };
-  const goToAllServices = () => {  
-    navigation.navigate("AllServices");
-  };
+  
   const featuresData = [
     {
-        id: 1,
-        icon: icons.criminal,
-        color: COLORS.red,
-        backgroundColor: COLORS.lightRed,
-        description: "Criminal Law",
-      },
-      {
-        id: 2,
-        icon: icons.property,
-        color: COLORS.yellow,
-        backgroundColor: COLORS.lightyellow,
-        description: "Property Law",
-      },
-      {
-        id: 3,
-        icon: icons.coperate,
-        color: COLORS.purple,
-        backgroundColor: COLORS.lightpurple,
-        description: "Corporate Law",
-      },
-      {
-        id: 4,
-        icon: icons.family,
-        color: COLORS.green,
-        backgroundColor: COLORS.lightGreen,
-        description: "Family Law",
-      },
+      id: 1,
+      icon: icons.criminal,
+      color: COLORS.red,
+      backgroundColor: COLORS.lightRed,
+      description: "Criminal Law",
+    },
+    {
+      id: 2,
+      icon: icons.property,
+      color: COLORS.yellow,
+      backgroundColor: COLORS.lightyellow,
+      description: "Property Law",
+    },
+    {
+      id: 3,
+      icon: icons.coperate,
+      color: COLORS.purple,
+      backgroundColor: COLORS.lightpurple,
+      description: "Corporate Law",
+    },
+    {
+      id: 4,
+      icon: icons.family,
+      color: COLORS.green,
+      backgroundColor: COLORS.lightGreen,
+      description: "Family Law",
+    },
+    {
+      id: 5,
+      icon: icons.construction,
+      color: COLORS.green,
+      backgroundColor: COLORS.lightGreen,
+      description: "Construction Law",
+    },
+    {
+      id: 6,
+      icon: icons.consumer,
+      color: COLORS.red,
+      backgroundColor: COLORS.lightRed,
+      description: "Consumer Law",
+    },
+    {
+      id: 7,
+      icon: icons.civil,
+      color: COLORS.yellow,
+      backgroundColor: COLORS.lightyellow,
+      description: "Civil Law",
+    },
+    {
+      id: 8,
+      icon: icons.litigation,
+      color: COLORS.purple,
+      backgroundColor: COLORS.lightpurple,
+      description: "Civil Ligitaion",
+    },
+    {
+      id: 9,
+      icon: icons.dispute,
+      color: COLORS.purple,
+      backgroundColor: COLORS.lightpurple,
+      description: "Dispute Law",
+    },
+    {
+      id: 10,
+      icon: icons.environmental,
+      color: COLORS.green,
+      backgroundColor: COLORS.lightGreen,
+      description: "Environmental Law",
+    },
+    {
+      id: 11,
+      icon: icons.humanrights,
+      color: COLORS.red,
+      backgroundColor: COLORS.lightRed,
+      description: "Human Rights",
+    },
+    {
+      id: 12,
+      icon: icons.injury,
+      color: COLORS.yellow,
+      backgroundColor: COLORS.lightyellow,
+      description: "Personal Injury",
+    },
+    {
+      id: 13,
+      icon: icons.insurance,
+      color: COLORS.yellow,
+      backgroundColor: COLORS.lightyellow,
+      description: "Insurance Law",
+    },
+    {
+      id: 14,
+      icon: icons.migration,
+      color: COLORS.purple,
+      backgroundColor: COLORS.lightpurple,
+      description: "Migration Law",
+    },
+    {
+      id: 15,
+      icon: icons.privateclient,
+      color: COLORS.green,
+      backgroundColor: COLORS.lightGreen,
+      description: "Private Client",
+    },
+    {
+      id: 16,
+      icon: icons.commercial,
+      color: COLORS.red,
+      backgroundColor: COLORS.lightRed,
+      description: "Commercial Law",
+    },
   ];
   const specialPromoData = [
     {
@@ -79,18 +158,6 @@ const Home = ({ navigation }) => {
       icon: images.waqas,
       title: "Waqas Ahmad",
       description: "Corporate Lawyer",
-    },
-    {
-      id: 5,
-      icon: images.waqas,
-      title: "Waqas Ahmad",
-      description: "Corporate Lawyer",
-    },
-    {
-      id: 6,
-      icon: images.aleem,
-      title: "Aleem Iqbal",
-      description: "Property Lawyer",
     },
   ];
   const [features, setFeatures] = React.useState(featuresData);
@@ -143,7 +210,7 @@ const Home = ({ navigation }) => {
               alignItems: "center",
               backgroundColor: COLORS.transparent,
             }}
-            onPress={goToReffer}
+            onPress={goToHome}
             // onPress={() => console.log("This Is Logo")}
           >
             <Image
@@ -234,10 +301,10 @@ const Home = ({ navigation }) => {
             ...FONTS.h4,
           }}
         >
-          Services
+          All Services
         </Text>
       </View>
-      <TouchableOpacity onPress={goToAllServices}>
+      {/* <TouchableOpacity onPress={() => console.log("View All Services")}>
         <Text
           style={{
             color: COLORS.gray,
@@ -246,14 +313,14 @@ const Home = ({ navigation }) => {
         >
           View All
         </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
     );
     const renderItem = ({ item }) => (
       <TouchableOpacity
         style={{
           marginBottom: SIZES.padding * 1.5,
-          width: 60,
+          width: 80,
           alignItems: "center",
         }}
         onPress={() => console.log(item.description)}
@@ -295,7 +362,7 @@ const Home = ({ navigation }) => {
       <FlatList
         ListHeaderComponent={Header}
         data={features}
-        numColumns={4}
+        numColumns={3}
         columnWrapperStyle={{ justifyContent: "space-between" }}
         keyExtractor={(item) => `${item.id}`}
         renderItem={renderItem}
@@ -309,7 +376,7 @@ const Home = ({ navigation }) => {
     const HeaderComponent = () => (
       <View>
         {renderHeader()}
-        {renderBanner()}
+        {/* {renderBanner()} */}
         {renderFeatures()}
         {renderPromoHeader()}
       </View>
@@ -321,7 +388,7 @@ const Home = ({ navigation }) => {
           marginBottom: SIZES.padding,
         }}
       >
-        <View
+        {/* <View
           style={{
             flex: 1,
           }}
@@ -343,7 +410,7 @@ const Home = ({ navigation }) => {
           >
             View All
           </Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     );
     const renderItem = ({ item }) => (
@@ -406,8 +473,8 @@ const Home = ({ navigation }) => {
         numColumns={2}
         columnWrapperStyle={{ justifyContent: "space-between" }}
         data={specialPromos}
-        keyExtractor={(item) => `${item.id}`}
-        renderItem={renderItem}
+        // keyExtractor={(item) => `${item.id}`}
+        // renderItem={renderItem}
         showsVerticalScrollIndicator={false}
       />
     );
@@ -424,4 +491,4 @@ const Home = ({ navigation }) => {
     </SafeAreaView>
   );
 };
-export default Home;
+export default AllServices;
